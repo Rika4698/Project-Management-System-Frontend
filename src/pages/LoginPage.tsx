@@ -44,7 +44,7 @@ const LoginPage = () => {
 
                 <div className="relative z-10 p-12 text-white max-w-xl">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-8 border border-white/10">
-                        <span className="font-bold text-2xl">R</span>
+                        <span className="font-bold text-2xl">AS</span>
                     </div>
                     <h1 className="text-5xl font-bold mb-6 leading-tight">Manage your projects with confidence.</h1>
                     <p className="text-blue-100 text-lg leading-relaxed">
@@ -52,14 +52,7 @@ const LoginPage = () => {
                         Streamline your workflow today.
                     </p>
 
-                    <div className="mt-12 flex items-center gap-4 text-sm font-medium text-blue-200">
-                        <div className="flex -space-x-3">
-                            {[1, 2, 3].map(i => (
-                                <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-700"></div>
-                            ))}
-                        </div>
-                        <p>Trusted by industry leaders</p>
-                    </div>
+                   
                 </div>
             </div>
 

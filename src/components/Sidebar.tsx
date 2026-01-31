@@ -26,7 +26,7 @@ const Sidebar = () => {
             {/* Mobile Menu Button */}
             <button
                 onClick={toggleSidebar}
-                className="lg:hidden fixed top-4 left-4 z-50 p-2.5 bg-white rounded-xl shadow-lg shadow-slate-200/50 text-slate-600 hover:text-blue-600 transition-colors border border-slate-100"
+                className="lg:hidden  fixed top-4 left-4 z-50 p-2.5 bg-white rounded-xl shadow-lg shadow-slate-200/50 text-slate-600 hover:text-blue-600 transition-colors border border-slate-100"
                 aria-label="Toggle Menu"
             >
                 {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -42,17 +42,17 @@ const Sidebar = () => {
 
             {/* Sidebar Container */}
             <aside className={`
-                fixed top-0 left-0 z-40 h-screen w-72 bg-white/95 backdrop-blur-xl border-r border-slate-200/60 transition-transform duration-300 cubic-bezier(0.4, 0, 0.2, 1) shadow-2xl lg:shadow-none
+                fixed top-0 left-0 z-40 h-full overflow-y-auto w-72 bg-white/95 backdrop-blur-xl border-r border-slate-200/60 transition-transform duration-300 cubic-bezier(0.4, 0, 0.2, 1) shadow-2xl lg:shadow-none
                 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
             `}>
-                <div className="h-full px-6 py-6 flex flex-col">
+                <div className="h-full px-6 py-6 flex flex-col ">
                     {/* Logo/Header */}
-                    <div className="flex items-center gap-3 mb-12 pl-2 pt-2">
-                        <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/30">
-                            R
+                    <div className="flex items-center gap-3 mb-12 pl-2 pt-2 ml-10 lg:ml-0">
+                        <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/30 ">
+                            AS
                         </div>
                         <div>
-                            <h1 className="text-xl font-bold text-slate-800 tracking-tight">RoleSystem</h1>
+                            <h1 className="text-xl font-bold text-slate-800 tracking-tight">Admin System</h1>
                             <p className="text-[10px] bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded-md inline-block font-semibold uppercase tracking-wider">Workspace</p>
                         </div>
                     </div>
@@ -84,20 +84,7 @@ const Sidebar = () => {
                             </nav>
                         </div>
 
-                        {/* Placeholder secondary nav */}
-                        <div>
-                            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 pl-4">Preferences</h3>
-                            <nav className="space-y-1">
-                                <a href="#" className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                    <Settings className="w-5 h-5 text-slate-400" />
-                                    Settings
-                                </a>
-                                <a href="#" className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                    <Bell className="w-5 h-5 text-slate-400" />
-                                    Notifications
-                                </a>
-                            </nav>
-                        </div>
+                      
                     </div>
 
                     {/* User Profile & Logout */}
@@ -108,7 +95,7 @@ const Sidebar = () => {
                             </div>
                             <div className="overflow-hidden flex-1">
                                 <p className="text-sm font-semibold text-slate-800 truncate">{user?.name}</p>
-                                <p className="text-xs text-slate-400 capitalize truncate">{user?.email}</p>
+                                <p className="text-xs text-slate-400 truncate">{user?.email}</p>
                             </div>
                         </div>
                         <button
