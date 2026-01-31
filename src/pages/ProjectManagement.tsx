@@ -15,8 +15,8 @@ const ProjectManagement = () => {
     const isAdmin = user?.role === 'ADMIN';
 
     return (
-        <div className="space-y-6 animate-in fade-in duration-500">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-2 lg:p-6 mt-10 lg:mt-0">
+        <div className="space-y-6 animate-in fade-in duration-500 p-2 lg:p-6 mt-10 lg:mt-0">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 ">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">Project Management</h1>
                     <p className="text-slate-500">Admin view of all system projects.</p>
@@ -70,7 +70,7 @@ const ProjectManagement = () => {
                                     </td>
                                     {isAdmin && (
                                         <td className="p-5 text-right">
-                                            <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <div className="flex items-center justify-end gap-2 ">
                                                 {!project.isDeleted ? (
                                                     <>
                                                         <button title="Edit" className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">

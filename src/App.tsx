@@ -4,6 +4,7 @@ import AppLayout from './layouts/AppLayout';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import ProjectManagement from './pages/ProjectManagement';
+import UserManagement from './pages/UserManagement';
 
 
 
@@ -17,7 +18,13 @@ function App() {
                 <Route element={<AppLayout />}>
                     <Route path="/" element={<Dashboard/>} />
                     <Route path="/projects" element={<ProjectManagement />} />
+                    
 
+                    
+                    {/* Admin Only Routes */}
+                    <Route element={<ProtectedRoute allowedRoles={['ADMIN']} />}>
+                        <Route path="/users" element={<UserManagement />} />
+                    </Route>
                  
                 </Route>
             </Route>
