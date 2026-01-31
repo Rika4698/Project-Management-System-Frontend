@@ -7,7 +7,7 @@ const UserManagement = () => {
     const [search, setSearch] = useState('');
     const { data, isLoading } = useGetUsersQuery({ page, limit: 10, search });
 
-    // console.log(data,"kk");
+    console.log(data,"kk");
 
     // Mutations
     const [updateRole, { isLoading: isUpdatingRole }] = useUpdateUserRoleMutation();
@@ -43,7 +43,7 @@ const UserManagement = () => {
 
     if (isLoading) return <div className="flex justify-center p-10"><Loader2 className="animate-spin text-blue-600 w-8 h-8" /></div>;
 
-    const totalPages = data?.data?.meta?.totalPages || 1;
+    const totalPages = data?.meta?.totalPages || 1;
 
     return (
         <div className="space-y-6 animate-in fade-in duration-500 p-2 lg:p-6 mt-10 lg:mt-0">
@@ -86,7 +86,7 @@ const UserManagement = () => {
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-50">
-                            {data?.map((user: any) => (
+                            {data?.users?.map((user: any) => (
                                 <tr key={user._id} className="hover:bg-slate-50/50 transition-colors group">
                                     <td className="p-5 pl-8">
                                         <div className="flex items-center gap-3">
@@ -137,7 +137,7 @@ const UserManagement = () => {
 
                 {/* Mobile Card View */}
                 <div className="md:hidden divide-y divide-slate-50">
-                    {data?.data?.users?.map((user: any) => (
+                    {data?.users?.map((user: any) => (
                         <div key={user._id} className="p-5 space-y-4">
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 text-indigo-700 flex items-center justify-center font-bold text-sm">

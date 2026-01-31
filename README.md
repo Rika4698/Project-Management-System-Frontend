@@ -46,6 +46,7 @@ To get the project running locally, follow these steps:
 3.  **Set up environment variables:**
     Create a `.env` file in the root directory and add the necessary variables. Follow the `.env.example` file as a template. Locally `.env` api: `VITE_API_URL=http://localhost:5000/api`
 
+
 4.  **Start the server:**
     ```bash
     
@@ -56,6 +57,8 @@ To get the project running locally, follow these steps:
 
 
 ---
+
+
 ## Backend Architecture
 
 The backend follows a professional, scalable folder structure:
@@ -88,6 +91,8 @@ The backend follows a professional, scalable folder structure:
 - `PATCH /api/projects/:id` - Edit project (ADMIN only)
 - `DELETE /api/projects/:id` - Soft delete (ADMIN only)
 ---
+
+
 
 ## 👤 Author & Contact
 

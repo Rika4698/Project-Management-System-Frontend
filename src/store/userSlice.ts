@@ -5,7 +5,10 @@ export const userApi = apiSlice.injectEndpoints({
         getUsers: builder.query({
             query: ({ page = 1, limit = 10, search = '' }) =>
                 `/users?page=${page}&limit=${limit}&search=${search}`,
-             transformResponse: (response: any) => response.data,
+              transformResponse: (response: any) => ({
+        users: response.data,
+        meta: response.meta,
+      }),
             providesTags: ['User'],
         }),
         updateUserRole: builder.mutation({
