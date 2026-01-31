@@ -40,7 +40,7 @@ const Dashboard = () => {
                     <p className="text-slate-500 mt-1">Welcome back, {user?.name}</p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col md:flex-row items-center gap-3">
                     <div className="relative group">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4 group-focus-within:text-blue-500 transition-colors" />
                         <input
