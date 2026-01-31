@@ -7,7 +7,7 @@ const UserManagement = () => {
     const [search, setSearch] = useState('');
     const { data, isLoading } = useGetUsersQuery({ page, limit: 10, search });
 
-    console.log(data,"kk");
+    // console.log(data,"kk");
 
     // Mutations
     const [updateRole, { isLoading: isUpdatingRole }] = useUpdateUserRoleMutation();

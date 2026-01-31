@@ -6,7 +6,7 @@ export const projectApi = apiSlice.injectEndpoints({
 
         getProjects: builder.query({
             query: (search) => `/projects${search ? `?search=${search}` : ''}`,
-               transformResponse: (response: any) => response.data,
+           transformResponse: (response: any) => response.data || [],
             providesTags: ['Projects'],
         }),
 
